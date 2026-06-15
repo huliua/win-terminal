@@ -1,19 +1,19 @@
 # WinTerminal
 
-A Windows terminal application built with WPF (.NET Framework 4.6) that supports Claude Code and Codex GUI integration. **Fully compatible with Windows 10 version 10240 (1507) and above.**
+A Windows terminal application built with WPF (.NET Framework 4.7.2) that supports Claude Code and Codex GUI integration. **Fully compatible with Windows 10 version 10240 (1507) and above.**
 
 ## Features
 
 - **Terminal** — Built-in terminal with command execution, ANSI color support, and keyboard shortcuts
 - **Claude Code** — Chat interface with Claude CLI and Anthropic API integration
 - **Codex GUI** — Embedded WebBrowser for Codex with navigation controls
-- **Windows 10 10240 Compatible** — Built with .NET Framework 4.6, no extra runtime needed
+- **Windows 10 10240 Compatible** — Built with .NET Framework 4.7.2, no extra runtime needed
 
 ## Prerequisites
 
 - Windows 10 version 10240 or later (64-bit)
 - Visual Studio 2015+ or MSBuild 14.0+
-- .NET Framework 4.6 (pre-installed on Windows 10)
+- .NET Framework 4.7.2 (pre-installed on Windows 10)
 
 ## Build
 
@@ -61,7 +61,7 @@ WinTerminal/
 ├── build.bat                # Build script
 ├── README.md
 └── WinTerminal/
-    ├── WinTerminal.csproj   # Project file (.NET 4.6)
+    ├── WinTerminal.csproj   # Project file (.NET 4.7.2)
     ├── App.config
     ├── App.xaml / App.xaml.cs
     ├── MainWindow.xaml / .cs
@@ -80,7 +80,7 @@ WinTerminal/
 
 ## Why WPF instead of Electron?
 
-Electron requires Windows 10 1709+ (build 16299) because Chromium dropped support for older versions. WPF with .NET Framework 4.6 runs on Windows 10 10240 natively with zero extra dependencies.
+Electron requires Windows 10 1709+ (build 16299) because Chromium dropped support for older versions. WPF with .NET Framework 4.7.2 runs on Windows 10 10240 natively with zero extra dependencies.
 
 ## License
 
