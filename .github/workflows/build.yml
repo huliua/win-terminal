@@ -1,0 +1,27 @@
+name: Build WinTerminal
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-2019
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build Release
+        run: msbuild WinTerminal.sln /p:Configuration=Release /p:Platform="Any CPU" /verbosity:minimal
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: WinTerminal
+          path: WinTerminal/bin/Release/WinTerminal.exe
+          retention-days: 90
