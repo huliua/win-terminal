@@ -13,13 +13,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install .NET 4.6 Targeting Pack
-        run: |
-          $url = "https://download.microsoft.com/download/E/4/1/E4173890-A24A-4936-9FC9-AF930FE3FA40/NDP46-DevPack-KB3045566-ENU.exe"
-          $installer = "$env:TEMP\net46.exe"
-          Invoke-WebRequest -Uri $url -OutFile $installer
-          Start-Process -FilePath $installer -ArgumentList "/quiet", "/norestart" -Wait
-
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v2
 
